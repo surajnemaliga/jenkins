@@ -20,9 +20,9 @@ node {
   
     stage('deploy') {
       def resourceGroup = 'cis'
-      def webAppName = 'suraj1234'
+      def webAppName = 'bermtec8'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: '6665e573-9f3b-4624-a28f-481b2d2c1c9f', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
+      withCredentials([usernamePassword(credentialsId: 'cf5afa98-3a28-4f0e-9d42-5f6bb6bce1ba', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
